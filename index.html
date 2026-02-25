@@ -8,7 +8,7 @@
     <meta
       name="author"
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
+    /> <!-- Esse aqui é o painel de loggin do boosttrap se mexer aqui vai ficar feio --->
     <meta name="generator" content="Astro v5.13.2" />
     <title>Signin Template · Bootstrap v5.3</title>
     <link
@@ -229,6 +229,7 @@
             Lembrar senha
           </label>
         </div>
+        <!-- muito top eu que fiz olhai ai minha  tradução bacanuda -->
         <button class="btn btn-primary w-100 py-2" type="submit">
           Logar
         </button>
@@ -263,14 +264,14 @@
           });
         }
 
-        // Initialize from storage (if present)
+        // se estiver no modo auto, vamos verificar o tema preferido do usuário
         var saved = localStorage.getItem('bs-theme') || 'auto';
         if (saved !== 'auto') {
           applyTheme(saved);
         }
         updateUI(saved === null ? 'auto' : saved);
 
-        // Handle dropdown item clicks
+        // precisa de um listener para os botões de tema
         document.querySelectorAll('[data-bs-theme-value]').forEach(function (btn) {
           btn.addEventListener('click', function (e) {
             var v = btn.getAttribute('data-bs-theme-value');
@@ -278,8 +279,8 @@
             updateUI(v);
           });
         });
-
-        // Optional: clicking the main button quickly toggles dark/light
+        
+        // opcional: adicionar um listener para alternar o tema com um duplo clique no botão principal
         var mainBtn = document.getElementById('bd-theme');
         if (mainBtn) {
           mainBtn.addEventListener('dblclick', function () {
