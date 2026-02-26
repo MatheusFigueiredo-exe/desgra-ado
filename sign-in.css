@@ -3,10 +3,16 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .form-signin {
   max-width: 330px;
   padding: 1rem;
 }
+/*Olha que codigo bonito!
+Blocado bem legal, não é mesmo?*/
 
 .form-signin .form-floating:focus-within {
   z-index: 2;
@@ -22,4 +28,15 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.faq-section {
+  max-width: 780px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
 }
